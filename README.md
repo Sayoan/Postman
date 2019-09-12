@@ -219,3 +219,6 @@ Execute os testes da mesma forma do tópico anterior (lembre-se de entrar no con
 
 ## Macetes
 Sem nenhum no momento, volte mais tarde.
+
+
+https://medium.com/better-practices/consumer-driven-contract-testing-using-postman-f3580dba5370
