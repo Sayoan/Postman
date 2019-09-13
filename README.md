@@ -213,7 +213,7 @@ Dentro da pasta da sua Collection será criada uma pasta com o nome "newman" e d
 Instale o Docker Desktop e abra o PowerShell, executar o comando abaixo para baixar a imagem que contém as dependências do NPM.
 >docker pull postman/newman
 
-Execute os testes da mesma forma do tópico anterior (lembre-se de entrar no container)
+Execute os testes da mesma forma do tópico anterior 
 >docker run -t postman/newman run https://www.getpostman.com/collections/8a0c9bc08f062d12dcda
 
 
