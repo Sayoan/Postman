@@ -211,10 +211,10 @@ Rodando os testes
 Dentro da pasta da sua Collection será criada uma pasta com o nome "newman" e dentro dela vai existir um arquivo HTML em cada execução dos testes.
 ## Rodando testes Newman + Docker
 Instale o Docker Desktop e abra o PowerShell, executar o comando abaixo para baixar a imagem que contém as dependências do NPM.
->docker pull postman/newman:ubuntu
+>docker pull postman/newman
 
 Execute os testes da mesma forma do tópico anterior (lembre-se de entrar no container)
->docker run -t postman/newman:ubuntu run https://www.getpostman.com/collections/8a0c9bc08f062d12dcda
+>docker run -t postman/newman run https://www.getpostman.com/collections/8a0c9bc08f062d12dcda
 
 
 ## Macetes
