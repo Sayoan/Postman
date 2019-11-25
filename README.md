@@ -65,6 +65,9 @@ Muito utilizada em testes que exigem token de autenticação. Exemplo de utiliza
 Este pre-request faz um post em uma rota que retorna o token de autenticação e posteriormente é setado como variável de ambiente na linha:  
 >pm.environment.set('access_token', responseJson.access_token)
 
+Também temos a opção de setar qual será a próxima rota desta collection que deve executar após a execução da atual:
+>postman.setNextRequest('Postman Echo PUT')
+
 ## Variáveis de Ambiente
 Pegando a variável de Ambiente
 >pm.environment.get("variable_key");
