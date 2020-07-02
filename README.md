@@ -212,6 +212,16 @@ Rodando os testes
 >newman run /path/to/collection.json -r cli,html
 
 Dentro da pasta da sua Collection será criada uma pasta com o nome "newman" e dentro dela vai existir um arquivo HTML em cada execução dos testes.
+
+### Relatório XML (aba de testes no AzureDevOps)
+Instalar a dependência 
+>npm install -g newman-reporter-html 
+
+Rodando os testes
+>newman run /path/to/collection.json -r cli,junit
+
+Dentro da pasta da sua Collection será criada uma pasta com o nome "newman" e dentro dela vai existir um arquivo XML em cada execução dos testes.
+
 ## Rodando testes Newman + Docker
 Instale o Docker Desktop e abra o PowerShell, executar o comando abaixo para baixar a imagem que contém as dependências do NPM.
 >docker pull postman/newman
