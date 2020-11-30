@@ -236,6 +236,29 @@ Neste teste acima é validado o tipo de cada atributo, lembrando que é possíve
         pm.response.to.have.body(expectBody);
     });  
     
+## Validação do Tipo da Resposta
+
+    /* response has this structure:
+    {
+      "name": "Jane",
+      "age": 29,
+      "hobbies": [
+        "skating",
+        "painting"
+      ],
+      "email": null
+    }
+    */
+    const jsonData = pm.response.json();
+    pm.test("Test data type of the response", () => {
+      pm.expect(jsonData).to.be.an("object");
+      pm.expect(jsonData.name).to.be.a("string");
+      pm.expect(jsonData.age).to.be.a("number");
+      pm.expect(jsonData.hobbies).to.be.an("array");
+      pm.expect(jsonData.website).to.be.undefined;
+      pm.expect(jsonData.email).to.be.null;
+    });
+
 ## Automatizando os Testes com Newman
 Necessário instalar o NodeJs e abrir o cmd, executar o seguinte comando para instalar o newman.
 >npm install -g newman
