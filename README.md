@@ -219,6 +219,22 @@ Neste teste acima é validado o tipo de cada atributo, lembrando que é possíve
     
     tests["UNA - CodigoIES"] = responseJSON[1].codigoInstituicao === 3
     tests["UNA - CodEstabelecimento IES"] = responseJSON[1].codigoEstabelecimentoLio === "123"
+
+## Validação do todos o corpo do response (responseBody)
+
+    const expectBody = 
+    {
+        "responseType": 0,
+        "titulo": "Salvar cliente - Informações faltantes",
+        "mensagens": [
+            "Favor informar o número do CPF",
+            "CPF inválido"
+        ]
+    }
+
+    pm.test("Body is correct", function () {
+        pm.response.to.have.body(expectBody);
+    });  
     
 ## Automatizando os Testes com Newman
 Necessário instalar o NodeJs e abrir o cmd, executar o seguinte comando para instalar o newman.
