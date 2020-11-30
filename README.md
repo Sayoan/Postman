@@ -68,6 +68,29 @@ Este pre-request faz um post em uma rota que retorna o token de autenticação e
 Também temos a opção de setar qual será a próxima rota desta collection que deve executar após a execução da atual:
 >postman.setNextRequest('Postman Echo PUT')
 
+Outro exemplo de prequest mas agora com outro tipo de body
+
+    var teste ;
+    var responseJSON;
+    const echoPostRequest = {
+    url: 'URL',
+    method: 'POST',
+    header: { 'content-type': 'application/json'},
+    body: {
+        mode: 'raw',
+        raw: JSON.stringify({"email":"XXXXX","password":"XXXXX"})
+    }
+    };
+
+    pm.sendRequest(echoPostRequest, function (err, res) {
+        console.log(responseJson)
+        console.log(err ? err : res.json());
+            if (err === null) {
+                var responseJson = res.json();
+                pm.environment.set('authorization', responseJson.authorization)
+            }
+    });
+
 ## Variáveis de Ambiente
 Pegando a variável de Ambiente
 >pm.environment.get("variable_key");
