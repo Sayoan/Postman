@@ -266,12 +266,35 @@ Necessário instalar o NodeJs e abrir o cmd, executar o seguinte comando para in
 Rodando testes com newman:
 >newman run examples/sample-collection.json
 
+## Importando arquivos durante a execução
+>newman run newman run /path/to/collection.json -e /path/to/enviroment.json -d, --iteration-data NOMEARQUIVO.txt 
+
+Lembre-se de colocar o cabeçalho do arquivo que será importado com o mesmo nome da variável, exemplo
+
+. Cabeçalho do arquivo como cod_cpf
+
+. Variável no ambiente(enviroment) do postman com o nome cod_cpf
+
+. Consumo na requisição ficará como {{cod_cpf}}
+
 ### Relatório HTML
 Instalar a dependência 
 >npm install -g newman-reporter-html 
 
 Rodando os testes
 >newman run /path/to/collection.json -r cli,html
+
+### Relatório HTML EXTRA Completo e Mais apresentável
+Instalar a dependência 
+>npm install -g newman-reporter-htmlextra
+
+Rodando os testes
+>newman run /path/to/collection.json -e /path/to/enviroment.json -r htmlextra --reporter-htmlextra-darkTheme
+ou também importando um arquivo
+>newman run newman run /path/to/collection.json -e /path/to/enviroment.json -d, --iteration-data /path/to/nomearquivo.txt -r htmlextra --reporter-htmlextra-darkTheme
+
+![imagem](https://i.imgur.com/5ZDNsA4.png)
+
 
 Dentro da pasta da sua Collection será criada uma pasta com o nome "newman" e dentro dela vai existir um arquivo HTML em cada execução dos testes.
 
