@@ -290,6 +290,7 @@ Instalar a dependência
 
 Rodando os testes
 >newman run /path/to/collection.json -e /path/to/enviroment.json -r htmlextra --reporter-htmlextra-darkTheme
+
 ou também importando um arquivo
 >newman run newman run /path/to/collection.json -e /path/to/enviroment.json -d, --iteration-data /path/to/nomearquivo.txt -r htmlextra --reporter-htmlextra-darkTheme
 
