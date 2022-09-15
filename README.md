@@ -5,7 +5,7 @@
 - Tipos de Requisições
 - Pre-Request´s
 - Variáveis de Ambiente
-- Testes de Contrato
+- Testes de Schema
 - Testes de Conteúdo 
 - Automatizando os Testes com Newman
 - Rodando testes Newman + Docker
@@ -112,7 +112,7 @@ Limpando a variável de ambiente
 
 Limpando a variável global
 >pm.globals.unset("variable_key");
-## Testes de Contrato
+## Testes de Schema
 
 Tem como objetivo garantir que o conteúdo fornecido não tenha sido modificado, poderá mostrar que tem permissão para validar se o contrato acordado foi ou não foi quebrado; deve validar se o esquema permanecerá o mesmo, assim como a integridade dos dados na comunicação entre cliente / servidor;
 É possível validar se os dados continuam iguais, como os valores limites, uma restrição de valores recebidos, se uma estrutura foi ou não modificada etc.
